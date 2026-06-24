@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Medicine Inventory</h2>
+
+  <div class="search-box">
+    <input
+      type="text"
+      placeholder="Search by medicine name"
+      [(ngModel)]="searchText"
+    />
+
+    <button (click)="search()">Search</button>
+    <button (click)="clear()">Clear</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Expiry Date</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Brand</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        *ngFor="let medicine of medicines"
+        [ngClass]="getRowClass(medicine.rowColor)"
+      >
+        <td>{{ medicine.fullName }}</td>
+        <td>{{ medicine.expiryDate | date:'dd-MMM-yyyy' }}</td>
+        <td>{{ medicine.quantity }}</td>
+        <td>{{ medicine.price | number:'1.2-2' }}</td>
+        <td>{{ medicine.brand }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

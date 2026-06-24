@@ -1,0 +1,45 @@
+.container {
+  width: 90%;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 8px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.search-box button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.red-row {
+  background-color: #ffcccc;
+}
+
+.yellow-row {
+  background-color: #fff3cd;
+}
